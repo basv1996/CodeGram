@@ -25,6 +25,7 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
              
             if($insert){
                 $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
+                header("location: landingPage.php");
             }else{
                 $statusMsg = "File upload failed, please try again.";
             } 

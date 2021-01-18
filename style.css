@@ -3,8 +3,8 @@
 }
 
 html, body {
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow-y: scroll;
+    overflow-x: scroll;
 }
 
 
@@ -148,6 +148,11 @@ form input:last-of-type {
     margin-bottom: 1em;
     font-family: sans-serif;
     font-size: .9em;
+}
+
+#landingPage img {
+    width: 90%;
+    object-fit: cover;
 }
 
 @media only screen and (max-height: 569px) {
