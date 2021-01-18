@@ -1,10 +1,7 @@
 <?php
-
 //session_start();
 include 'upload.php';
-
 $username = $_SESSION["username"];
-
 ?>
 
 
@@ -18,23 +15,13 @@ $username = $_SESSION["username"];
     
 </head>
 <body id="landingPage">
-  <header>
-   <nav>
-       <ul>
-           <li><h1><a href="#"><?= $_SESSION["username"]; ?></a> </h1></li>
-           <li><a href="#">Upload +</a></li>
-           <li><a href="logout.php">Uitloggen</a></li>
-       </ul>
-    </nav>
-   <form action="upload.php" method="post" enctype="multipart/form-data">
-       <label>Select Image File to Upload:</label>
-    <input type="file" name="file">
-    <input type="submit" name="submit" value="Upload">
-</form>
-    </header>
+ <?php
+include 'header.php';
+?>
 
 <main>
-<h1>Welkom <a href="#"><?= $_SESSION["username"]; ?></a> </h1>
+<h1>Welkom <?= $_SESSION["username"]; ?> </h1>
+<h3>HomeFeed:</h3>
  <div class="Uploads">
 <?php
 // Include the database configuration file
@@ -47,18 +34,25 @@ if($query->num_rows > 0){
     while($row = $query->fetch_assoc()){
         $imageURL = 'uploads/'.$row["file_name"];
         $user = $row["user"];
+        $votes = $row["vote_count"];
 ?>
  
    <figure>
     <img src="<?php echo $imageURL; ?>" alt="" />
        <figcaption>Geupload door: <span><?= " ".$user ?></span></figcaption>
+       <p>Votes: <?php echo $votes; ?></p>
+       <p><a href="#">UpVote</a></p>
+       <p><a href="#">DownVote</a></p>
     </figure>
   
     
 <?php }
 }else{ ?>
     <p>No image(s) found...</p>
-<?php } ?>
+<?php } 
+      
+
+     ?>
 
 
   </div>

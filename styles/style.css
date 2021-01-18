@@ -108,7 +108,7 @@ justify-content: space-between;
 }
 
 
-#landingPage header nav ul li:nth-of-type(2) a {
+#landingPage header nav ul li:nth-last-child(2) a {
 background: linear-gradient(90deg, rgba(26,21,98,1) 0%, rgba(10,124,166,1) 100%);
 padding: 1em;
     color: #fff;

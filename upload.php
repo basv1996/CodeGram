@@ -39,6 +39,7 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
     $statusMsg = 'Please select a file to upload.';
 }
 
+
 // Display status message
 echo $statusMsg;
 ?>
