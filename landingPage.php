@@ -20,8 +20,8 @@ include 'header.php';
 ?>
 
 <main>
-<h1>Welkom <?= $_SESSION["username"]; ?> </h1>
-<h3>HomeFeed:</h3>
+<!--<h1>Welkom <?= $_SESSION["username"]; ?> </h1>-->
+<h1>CodeGram</h1>
  <div class="Uploads">
 <?php
 // Include the database configuration file
@@ -39,10 +39,7 @@ if($query->num_rows > 0){
  
    <figure>
     <img src="<?php echo $imageURL; ?>" alt="" />
-       <figcaption>Geupload door: <span><?= " ".$user ?></span></figcaption>
-       <p>Votes: <?php echo $votes; ?></p>
-       <p><a href="#">UpVote</a></p>
-       <p><a href="#">DownVote</a></p>
+       <figcaption><a href="otherAccount.php"><span><?= " ".$user ?></span></a></figcaption>
     </figure>
   
     

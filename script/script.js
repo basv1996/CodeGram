@@ -1,5 +1,5 @@
-var uploadForm = document.querySelector("#landingPage header form");
-var uploadButton = document.querySelector("#landingPage header nav ul li:nth-last-child(2)");
+var uploadForm = document.querySelector("body header form");
+var uploadButton = document.querySelector("body header nav ul li:nth-last-child(2)");
 
 function visibleForm() {
 uploadForm.classList.toggle("active");

@@ -8,7 +8,8 @@
 html, body {
     overflow-y: hidden;
     overflow-x: hidden;
-    color: #000;
+    color: #fff;
+    background-color: #3a3b40;
 }
 
 a {
@@ -92,67 +93,128 @@ form input:last-of-type {
 html, body#landingPage {
 overflow-y: scroll;
 }
-#landingPage header {
-    background-color: aqua;
-    padding: 1em;
-    margin: 1em 0;
+ header {
+    background-color: #1f1f2c;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    box-shadow: .1em 0 .1em;
 }
 
 
-#landingPage header nav ul {
+ header nav ul {
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-    align-items: center;
-    
+    align-items: center;    
+}
+
+ header nav ul li {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
 }
 
 
-#landingPage header nav ul li:nth-last-child(2) a {
-background: linear-gradient(90deg, rgba(26,21,98,1) 0%, rgba(10,124,166,1) 100%);
+ header nav ul li:nth-last-child(2) a {
+/*background: linear-gradient(90deg, rgba(26,21,98,1) 0%, rgba(10,124,166,1) 100%);*/
 padding: 1em;
     color: #fff;
     font-size: 1.2em;
     font-weight: 700;
 }
 
-#landingPage header form {
+ header nav ul li a {
+}
+
+ header nav ul li a h4 {
+font-size: 0;
+}
+
+ header nav ul li a svg {
+    flex-grow: 1;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+ header nav ul li a svg path.cls-1{
+   
+    fill: url(#Naamloos_verloop_5);
+
+}
+
+ header form {
 margin: 1em 0;
 display: none;
 }
-#landingPage header form label {
+ header form label {
     font-size: 1.2em;
     font-weight: 700;
 }
-#landingPage header form input {
+ header form input {
     padding: 1.5em 0;
 width: 100%;}
 
-#landingPage header form input:last-child{
+ header form input:last-child{
 box-shadow: 3px 4px rgba(0,0,0,0.5);}
 
-#landingPage main{
+ main{
 padding: 0 15px;
+    margin-bottom: 6em;
 }
 
-#landingPage main .uploads {
+main h1 {
+margin-bottom: .5em;
+    text-align: center;
+font-family: sans-serif, Helvetica;
+}
+
+ main .uploads {
 display: flex;
 flex-direction: column;
 }
 
-#landingPage main figure {
+ main figure {
 margin: 1em 0;
-    box-shadow: 1px 1px #ddd;
+    box-shadow: 0 8px 6px -6px black;
     display: flex;
     flex-direction: column;
 }
 
-#landingPage main figure figcaption {
-    align-self: flex-end;
-    padding: .5em;
+ main figure figcaption {
+/*    align-self: flex-end;*/
+    padding: .5em 0;
+    order: 1;
 }
 
-#landingPage main figure figcaption span{
+ main figure img {
+    border-radius: 10%;
+order: 2;
+ width: 100%;
+ height: 100%;
+ }
+
+ main figure figcaption span{
 font-weight: 700;
+    color: #fff;
+}
+
+
+/* Account Page*/
+
+#AccountPage main figure {
+    box-shadow: unset;
+margin: unset;
+}
+#AccountPage main .uploads {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-gap: .2em;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#AccountPage main .uploads figure img {
+    border-radius: unset;
 }
 

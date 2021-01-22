@@ -14,14 +14,13 @@ $username = $_SESSION["username"];
     <link rel="stylesheet" href="styles/style.css">
     
 </head>
-<body id="landingPage">
+<body id="AccountPage">
  <?php
 include 'header.php';
 ?>
 
 <main>
-<h1>Account Page of <?= $_SESSION["username"]; ?> </h1>
-<h3>My Uploads:</h3>
+<h1><?= $_SESSION["username"]; ?> </h1>
  <div class="Uploads">
 <?php
 // Include the database configuration file
@@ -39,8 +38,10 @@ if($query->num_rows > 0){
  
    <figure>
     <img src="<?php echo $imageURL; ?>" alt="" />
+<!--
        <figcaption>Geupload door: <span><?= " ".$user ?></span></figcaption>
        <p> Uploaded on: <?php echo $uploadDate; ?> </p>
+-->
     </figure>
   
     
