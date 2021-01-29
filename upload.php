@@ -10,6 +10,8 @@ $targetDir = "uploads/";
 
 $userName = $_SESSION["username"];
 
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+
 if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
     $fileName = basename($_FILES["file"]["name"]);
     $targetFilePath = $targetDir . $fileName;
@@ -38,7 +40,9 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
 }else{
     $statusMsg = 'Please select a file to upload.';
 }
+} else {
+    $statusMsg = '';
+}
 
 // Display status message
-echo $statusMsg;
 ?>

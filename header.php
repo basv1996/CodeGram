@@ -1,4 +1,9 @@
-<header>
+<?php
+
+include 'upload.php';
+    
+    ?>
+   <header>
     <nav>
         <ul>
             <li>
@@ -22,7 +27,7 @@
                     </svg><h4>Home</h4></a>
             </li>
             <li>
-                <h1><a href="accountPage.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.18 101.88"><defs></defs><g id="Laag_2" data-name="Laag 2"><g id="Laag_1-2" data-name="Laag 1"><g id="nRQeqi"><path class="cls-1" d="M106,101.88c.06-1.23.17-2.2.14-3.16-.49-18.32-16-38.39-33.86-43.56a8.32,8.32,0,0,0-5.09.64C59.23,59.2,50.79,60.66,43,57c-7.1-3.37-12.73-1.4-18,2.43-5.71,4.18-11.43,8.78-15.79,14.27A41.52,41.52,0,0,0,0,101.88ZM53.08,0A27.18,27.18,0,0,0,26,26.93c-.16,14.53,12.3,27,27,27a27,27,0,0,0,0-54Z"/><path class="cls-1" d="M106,101.88H0A41.52,41.52,0,0,1,9.21,73.65C13.57,68.16,19.29,63.56,25,59.38c5.24-3.83,10.87-5.8,18-2.43,7.82,3.71,16.26,2.25,24.25-1.15a8.32,8.32,0,0,1,5.09-.64c17.85,5.17,33.37,25.24,33.86,43.56C106.2,99.68,106.09,100.65,106,101.88Z"/><path class="cls-1"  d="M53.08,0a27,27,0,0,1,0,54c-14.74,0-27.2-12.51-27-27A27.18,27.18,0,0,1,53.08,0Z"/></g></g></g></svg><h4><?= $_SESSION["username"]; ?></h4></a> </h1></li>
+                <a href="accountPage.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.18 101.88"><defs></defs><g id="Laag_2" data-name="Laag 2"><g id="Laag_1-2" data-name="Laag 1"><g id="nRQeqi"><path class="cls-1" d="M106,101.88c.06-1.23.17-2.2.14-3.16-.49-18.32-16-38.39-33.86-43.56a8.32,8.32,0,0,0-5.09.64C59.23,59.2,50.79,60.66,43,57c-7.1-3.37-12.73-1.4-18,2.43-5.71,4.18-11.43,8.78-15.79,14.27A41.52,41.52,0,0,0,0,101.88ZM53.08,0A27.18,27.18,0,0,0,26,26.93c-.16,14.53,12.3,27,27,27a27,27,0,0,0,0-54Z"/><path class="cls-1" d="M106,101.88H0A41.52,41.52,0,0,1,9.21,73.65C13.57,68.16,19.29,63.56,25,59.38c5.24-3.83,10.87-5.8,18-2.43,7.82,3.71,16.26,2.25,24.25-1.15a8.32,8.32,0,0,1,5.09-.64c17.85,5.17,33.37,25.24,33.86,43.56C106.2,99.68,106.09,100.65,106,101.88Z"/><path class="cls-1"  d="M53.08,0a27,27,0,0,1,0,54c-14.74,0-27.2-12.51-27-27A27.18,27.18,0,0,1,53.08,0Z"/></g></g></g></svg><h4><?= $_SESSION["username"]; ?></h4></a></li>
             <li>
                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 656.7 656.7"><defs><style>.cls-1{fill:url(#Naamloos_verloop_5);}.cls-2{fill:#fff;}</style><linearGradient id="Naamloos_verloop_5" y1="328.35" x2="656.7" y2="328.35" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#36a9e1"/><stop offset="1" stop-color="#29235c"/></linearGradient></defs><g id="Laag_2" data-name="Laag 2"><g id="Laag_1-2" data-name="Laag 1"><circle class="cls-1" cx="328.35" cy="328.35" r="328.35"/><path class="cls-2" d="M567.48,315.44H348.55a7.29,7.29,0,0,1-7.29-7.29V89.22a7.29,7.29,0,0,0-7.3-7.29H322.73a7.29,7.29,0,0,0-7.29,7.29V308.15a7.29,7.29,0,0,1-7.29,7.29H89.22a7.29,7.29,0,0,0-7.29,7.29V334a7.29,7.29,0,0,0,7.29,7.3H308.15a7.29,7.29,0,0,1,7.29,7.29V567.48a7.29,7.29,0,0,0,7.29,7.29H334a7.3,7.3,0,0,0,7.3-7.29V348.55a7.29,7.29,0,0,1,7.29-7.29H567.48a7.3,7.3,0,0,0,7.29-7.3V322.73A7.29,7.29,0,0,0,567.48,315.44Z"/></g></g></svg><h4>Upload +</h4></a>
             </li>
@@ -31,9 +36,10 @@
             </li>
         </ul>
     </nav>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
+    <form action="landingPage.php" method="post" enctype="multipart/form-data">
         <label>Select Image File to Upload:</label>
         <input type="file" name="file">
+        <span><?= $statusMsg ?></span>
         <input type="submit" name="submit" value="Upload">
     </form>
 </header>

@@ -44,14 +44,18 @@ if($query->num_rows > 0){
 -->
     </figure>
   
-    
+  </div>  
 <?php }
 }else{ ?>
-    <p>No image(s) found...</p>
+    <div id="empty_state">
+    <img src="Icons/no_image_found_1.png" alt="">
+    <h2>No image(s) found...</h2>
+    <p>Upload your first image at +</p>
+     </div>
 <?php } ?>
 
 
-  </div>
+  
     </main>
     <script src="script/script.js"></script>
 </body>

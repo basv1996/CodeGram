@@ -45,7 +45,11 @@ if($query->num_rows > 0){
     
 <?php }
 }else{ ?>
-    <p>No image(s) found...</p>
+   <div id="empty_state">
+    <img src="Icons/no_image_found_1.png" alt="">
+    <h2>No image(s) found...</h2>
+    <p>Upload your first image at +</p>
+    </div>
 <?php } 
       
 

@@ -7,18 +7,15 @@ include "login.php";
 <!--Gemaakt door Jody Lorist & Bas Vugts-->
 
 <!DOCTYPE html>
-<html lang="en">
+<html id="loginHTML" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>phpgram</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body id="loginPage">
     
-    <header>
-        
-    </header>
     
     <main>
       
@@ -42,11 +39,6 @@ include "login.php";
         <a href="register.php">Heb je nog geen account? <b>Sign up.</b></a>
         
     </main>
-    
-    <footer>
-        
-        
-    </footer>
     
     
 </body>
